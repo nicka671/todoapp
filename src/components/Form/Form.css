@@ -1,0 +1,20 @@
+.Form {
+    height: 5vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.FormInput {
+    width: 70%;
+}
+
+.FormButton{
+    border-style: solid;
+    border-width: 2px;
+    width: 22%;
+    color: rgb(90 190 75);
+    background: none;
+    border-color: rgb(90 190 75);
+    border-radius: 6%;
+}
