@@ -1,13 +1,11 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import Container from './components/Container/Container';
 
-function App() {
-  return (
+const App = () => (
     <div className="App">
-    <Container/>
+        <Container />
     </div>
-  );
-}
+);
 
 export default App;
