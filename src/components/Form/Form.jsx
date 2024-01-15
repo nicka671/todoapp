@@ -1,14 +1,12 @@
 import {useState} from 'react';
 import './Form.css';
 
-function Form(props) {
-
-  const {onAddTask} = props;
+const Form = ({onAddTask}) => {
   const [text, setText] = useState(""); // local state of component
-  const onChangeText = (event) => {
+  const handleChangeText = (event) => {
     setText(event.target.value);
   }
-  const onAdd = (event) => {
+  const handleAdd = (event) => {
     event.preventDefault();
     onAddTask(text);
     setText("");
@@ -16,8 +14,8 @@ function Form(props) {
 
   return (
     <div className="Form">
-        <input type='text' className="FormInput" value={text} onChange={onChangeText}/>
-        <button className="FormButton" onClick={onAdd}> ADD </button>
+        <input type='text' className="FormInput" value={text} onChange={handleChangeText}/>
+        <button className="FormButton" onClick={handleAdd}> ADD </button>
     </div>
   );
 }
