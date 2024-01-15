@@ -1,11 +1,11 @@
 import './TaskList.css';
 import Task from '../Task/Task';
 
-function TaskList(props) {
+const TaskList = ({tasks, onDeleteTask, onChangeTaskStatus}) => {
   return (
     <ul className="TaskList">
-        {props.tasks.map((task) => {
-            return <Task id={task.id} isDone={task.isDone} text={task.text} onDelete={props.onDeleteTask} onChange={props.onChangeTaskStatus}/>
+        {tasks.map((task) => {
+            return <Task key={task.id} id={task.id} isDone={task.isDone} text={task.text} onDelete={onDeleteTask} onChange={onChangeTaskStatus}/>
         })
     }
     </ul>
